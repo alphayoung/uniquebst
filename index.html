@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="bst.js" charset="utf-8"></script>
+        <style>
+            .chart {
+                
+            }
+            
+            .node circle, rect {
+              cursor: pointer;
+              fill: #fff;
+              stroke: steelblue;
+              stroke-width: 1.5px;
+            }
+
+            .node text {
+              font: 16px sans-serif;
+            }
+            
+            path.link {
+              fill: none;
+              stroke: #ccc;
+              stroke-width: 1.5px;
+            }
+
+            </style>
+    </head>
+    <body>
+        <form action="javascript:draw()">
+            <label for="bst_size">Binary Search Tree Nodes: </label><input type="text" id="bst_size">
+            <input type="submit" value="Go">
+            <input type="checkbox" id="show_value"></input><label for="show_value">Show Value</label>
+        </form>
+        <p>p[n] is the number of unique binary search trees given n nodes.</p>
+        <svg class="chart"></svg>
+    </body>
+</html>
